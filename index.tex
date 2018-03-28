@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+
+\begin{document}
+this is a latex document \\
+
+Suppose we are given a rectangle with side lengths $(z+1)$ and $(x+3)$. then the equantion $(A=X^2+4x+3)$ repesentasion yhe area og thr rectange.
+
+Suppose we are given a rectangle with side lengths $(z+1)$ and $(x+3)$. then the equantion $$(A=X^2+4x+3)$$ reperentasion yhe area og thr rectange. \\
+
+kodingan VHDL untuk: $('A + B)$ \\
+
+Entity name-file is
+
+	Port(
+	
+		A : in std-logic;
+		
+		B : out std-logic;
+		
+		)
+		
+end name-file \\
+
+Artsitecture name-arsitekture of name-file is
+	signal C, D : in std-logic;
+	
+	begin
+		
+		C <= not A;
+		
+		D <= A;
+		
+		B <= C OR D;
+	
+	end	name-artitekture \\
+	
+	\pagebreak
+	Kodingan VHDL untuk: kondisional
+
+	ENTITY name-file is
+	
+		PORT(
+		
+			A: in std-logic-vector(3 downto 0);
+			
+			B: out std-logic-vector(2 downto 0);
+			
+			EN : out std-logic;
+			
+		)
+		
+	end name-file \\
+	
+	arsitecture nane-arsitekture of name-file is
+		
+		begin
+		
+			with A select
+			
+				B <= "11" WHEN W(3) ELSE
+				
+					 "10" WHEN W(2) ELSE
+					 
+					 "01" WHEN W(1) ELSE
+					 
+					 "00";
+					 				
+				IF(W = "0000") THEN
+				
+					B <= 0;
+					
+				ELSE
+				
+					B <= 1;
+					
+	end name-arsitecture
+	
+	\pagebreak
+	kodingan VHDL untuk: MUX dan DEMUX \\
+	
+	entity name-file is
+	
+		PORT(
+		
+			A: in std-logic-vector(7 downto 0);
+			
+			B: out std-logic;
+			
+			SEL: in std-logic-vector(2 downto 0)
+			
+			);
+			
+	end name-file
+	
+	arsitecture name-arsitecture of name0-file is
+	
+		begin
+		
+			if(SEL = "111") then
+			
+				B <= A(7);
+	
+	end name-arsitecture
+	
+	kodingan untuk DEMUX:
+	entity name-file is
+		PORT(
+			A: in std-logic;
+			B: out std-logic-vector(7 downto 0);
+			SEL: in std-logic(2 downto 0)
+			);
+		
+	end name-file
+	
+	arsitecture name-arsitecture of name-file is
+		
+		begin
+		
+			if(SEL = "111") then
+				B(7) <= A;		
+		
+	end name-arsitecture
+\end{document}
